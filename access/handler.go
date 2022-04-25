@@ -56,7 +56,11 @@ func (msh MySQLHandler) OpenSQL() (*sql.DB, error) {
 
 // Close current SQL connection.
 func (msh MySQLHandler) CloseCurrentSQL() error {
-	return msh.db.Close()
+	if msh.db != nil {
+		return msh.db.Close()
+	}
+
+	return nil
 }
 
 func (msh MySQLHandler) WriteToDB(page int64, content []byte, updatedAt string) error {

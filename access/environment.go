@@ -32,10 +32,11 @@ func getMySQLConfigFromEnv() (*mysql.Config, error) {
 	}
 
 	return &mysql.Config{
-		User:   uname,
-		Passwd: passwd,
-		Addr:   addr,
-		DBName: dbname,
-		Net:    proto,
+		User:                 uname,
+		Passwd:               passwd,
+		Addr:                 addr,
+		DBName:               dbname,
+		Net:                  proto,
+		AllowNativePasswords: true,
 	}, nil
 }
