@@ -1,0 +1,12 @@
+github.com/go-sql-driver/mysql v1.6.0 h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfCHuOE=
+github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
+github.com/rk0cc-xyz/gaf v1.0.0 h1:NiogzGyhWm2diimcdQigHWHpu2FUfYaZ8voxau3eZ4U=
+github.com/rk0cc-xyz/gaf v1.0.0/go.mod h1:8XVaaIEXkxK/hqUkUCY+QFneGsS5JTvKbfrw3u5A1p0=
+github.com/rk0cc-xyz/gaf v1.1.0 h1:Fzh/Svcb6q587s6KRzVqO8Z8U4OObIvhw6ZbjM9pyWE=
+github.com/rk0cc-xyz/gaf v1.1.0/go.mod h1:8XVaaIEXkxK/hqUkUCY+QFneGsS5JTvKbfrw3u5A1p0=
+github.com/rk0cc-xyz/gaf v1.1.1 h1:FyNqcKaQBewQoeFPD0vtMjEqoQK1HZnMGWWh1LLmJ9s=
+github.com/rk0cc-xyz/gaf v1.1.1/go.mod h1:8XVaaIEXkxK/hqUkUCY+QFneGsS5JTvKbfrw3u5A1p0=
+github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80 h1:nrZ3ySNYwJbSpD6ce9duiP+QkD3JuLCcWkdaehUS/3Y=
+github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80/go.mod h1:iFyPdL66DjUD96XmzVL3ZntbzcflLnznH0fr99w5VqE=
+github.com/ulikunitz/xz v0.5.10 h1:t92gobL9l3HE202wg3rlk19F6X+JOxl9BBrCCMYEYd8=
+github.com/ulikunitz/xz v0.5.10/go.mod h1:nbz6k7qbPmH4IRqmfOplQw/tblSgqTqBwxkY0oWt/14=
