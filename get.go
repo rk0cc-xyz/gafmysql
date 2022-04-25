@@ -6,6 +6,7 @@ import (
 	"github.com/rk0cc-xyz/gafmysql/access"
 )
 
+// Receive all archived repository to a completed array structure.
 func GetArchivedRepositoryAPI() ([]structure.GitHubRepositoryStructure, *string, error) {
 	msqlinst, msqlinsterr := access.GetMySQLHandlerInstance()
 	if msqlinsterr != nil {

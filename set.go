@@ -53,6 +53,7 @@ func asmContainer(api [][]structure.GitHubRepositoryStructure) ([]storage.Databa
 	return psdfc, &last_page, nil
 }
 
+// Save current content of GitHub API to MySQL server.
 func ArchiveCurrentAPIToDB() error {
 	api, apierr := dlFromAPI()
 	if apierr != nil {

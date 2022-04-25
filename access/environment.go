@@ -9,6 +9,7 @@ import (
 )
 
 const (
+	// Prefix uses in this page
 	ENV_PREFIX = "GAF_MYSQL"
 	env_uname  = ENV_PREFIX + "_USERNAME"
 	env_passwd = ENV_PREFIX + "_PASSWORD"

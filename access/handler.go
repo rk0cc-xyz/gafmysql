@@ -10,11 +10,13 @@ import (
 
 var handler_instance *MySQLHandler = nil
 
+// Implemented DatabaseFieldHandler in MySQL environment.
 type MySQLHandler struct {
 	sql_conf mysql.Config
 	db       *sql.DB
 }
 
+// Get current instance of the handler.
 func GetMySQLHandlerInstance() (*MySQLHandler, error) {
 	if handler_instance == nil {
 		conf, conferr := getMySQLConfigFromEnv()
@@ -31,16 +33,14 @@ func GetMySQLHandlerInstance() (*MySQLHandler, error) {
 	return handler_instance, nil
 }
 
+// Open the connection between SQL and this package.
+//
+// If opened already, it just return same instance of the database.
 func (msh MySQLHandler) OpenSQL() (*sql.DB, error) {
 	db_closed := false
 
-	if msh.db == nil {
+	if msh.db == nil || msh.db.Ping() != nil {
 		db_closed = true
-	} else {
-		pingerr := msh.db.Ping()
-		if pingerr != nil {
-			db_closed = true
-		}
 	}
 
 	if db_closed {
@@ -54,6 +54,7 @@ func (msh MySQLHandler) OpenSQL() (*sql.DB, error) {
 	return msh.db, nil
 }
 
+// Close current SQL connection.
 func (msh MySQLHandler) CloseCurrentSQL() error {
 	return msh.db.Close()
 }
@@ -96,6 +97,7 @@ func (msh MySQLHandler) ReadFromDB(page int64) ([]byte, *string, error) {
 	return content, &updatedAt, nil
 }
 
+// Receive current maximum page of the context.
 func (msh MySQLHandler) GetMaxPage() (*int64, error) {
 	cdb, cdberr := msh.OpenSQL()
 	if cdberr != nil {
@@ -113,6 +115,7 @@ func (msh MySQLHandler) GetMaxPage() (*int64, error) {
 	return &maxPage, nil
 }
 
+// Clear redundent page by giving the maximum page from fetch.
 func (msh MySQLHandler) ClearExtraPages(fetchMaxPage int64) error {
 	cdb, cdberr := msh.OpenSQL()
 	if cdberr != nil {
