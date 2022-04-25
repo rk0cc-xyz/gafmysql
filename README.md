@@ -1,0 +1,9 @@
+# MySQL/MariaDB implementation of GAF
+
+## Environments
+
+* `GAF_MYSQL_USERNAME`
+* `GAF_MYSQL_PASSWORD`
+* `GAF_MYSQL_PROTOCOL`
+* `GAF_MYSQL_ADDRESS`
+* `GAF_MYSQL_DATABASE_NAME`
