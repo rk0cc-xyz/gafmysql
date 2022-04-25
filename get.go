@@ -24,6 +24,8 @@ func GetArchivedRepositoryAPI() ([]structure.GitHubRepositoryStructure, *string,
 		dfca = append(dfca, *dfc)
 	}
 
+	msqlinst.CloseCurrentSQL()
+
 	return joinAllContent(dfca)
 }
 
