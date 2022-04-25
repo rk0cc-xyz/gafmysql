@@ -69,7 +69,7 @@ func (msh MySQLHandler) WriteToDB(page int64, content []byte, updatedAt string) 
 		return cdberr
 	}
 
-	stmt, stmterr := cdb.Prepare("INSERT INTO `REPOSITORY_CONTENT` VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE `CONTENT` = ?, `UPDATED_AT` = ?")
+	stmt, stmterr := cdb.Prepare("INSERT INTO `REPOSITORY_CONTENT` (`PAGE`, `CONTENT`, `UPDATED_AT`) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE `CONTENT` = ?, `UPDATED_AT` = ?")
 	if stmterr != nil {
 		return stmterr
 	}
